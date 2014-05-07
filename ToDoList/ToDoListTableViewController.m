@@ -7,6 +7,7 @@
 //
 
 #import "ToDoListTableViewController.h"
+#import "AddToDoItemViewController.h"
 #import "ToDoItem.h"
 
 @interface ToDoListTableViewController ()
@@ -19,7 +20,12 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    
+    AddToDoItemViewController *source = [segue sourceViewController];
+    ToDoItem *item = source.toDoItem;
+    if (nil != item) {      // If we have an item, add it and reload the table.
+        [self.toDoItems addObject:item];
+        [self.tableView reloadData];
+    }
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -89,6 +95,12 @@
     ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName;
     
+    if (toDoItem.completed) {       // Set completed or not.
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
@@ -141,5 +153,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];               // Deselect cell immediately
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];    // Search for item in array
+    tappedItem.completed = !tappedItem.completed;                           // Toggle the completion state
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone]; // Reload
+}
 
 @end

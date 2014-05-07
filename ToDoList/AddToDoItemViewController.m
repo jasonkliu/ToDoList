@@ -9,10 +9,23 @@
 #import "AddToDoItemViewController.h"
 
 @interface AddToDoItemViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @end
 
 @implementation AddToDoItemViewController
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (self.doneButton != sender)      // Check if we hit the "done" button
+        return;
+    if (self.textField.text.length > 0) {   // Check if we have a string in inputfield
+        self.toDoItem = [[ToDoItem alloc] init];
+        self.toDoItem.itemName = self.textField.text;
+        self.toDoItem.completed = NO;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
