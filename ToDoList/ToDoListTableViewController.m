@@ -7,8 +7,11 @@
 //
 
 #import "ToDoListTableViewController.h"
+#import "ToDoItem.h"
 
 @interface ToDoListTableViewController ()
+
+@property NSMutableArray *toDoItems; // Mutable array can be changed, stores our items
 
 @end
 
@@ -31,12 +34,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.toDoItems = [[NSMutableArray alloc] init];
+    [self loadInitialData];     // Loads data from below.
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)loadInitialData
+{
+    ToDoItem *item1 = [[ToDoItem alloc] init];
+    item1.itemName = @"Buy Milk";
+    [self.toDoItems addObject:item1];
+    ToDoItem *item2 = [[ToDoItem alloc] init];
+    item2.itemName = @"Buy eggs";
+    [self.toDoItems addObject:item2];
+    ToDoItem *item3 = [[ToDoItem alloc] init];
+    item3.itemName = @"Read a book";
+    [self.toDoItems addObject:item3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,30 +66,32 @@
 #pragma mark - Table view data source
 
 // Comment out these two methods to show the static data.
-/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;  // Single section
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
-}*/
+    return [self.toDoItems count];    // number of items in array
+}
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
     // Configure the cell...
+    static NSString *CellIdentifier = @"ListPrototypeCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Set up item and label...
+    ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
+    cell.textLabel.text = toDoItem.itemName;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
