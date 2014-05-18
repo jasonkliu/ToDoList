@@ -16,7 +16,19 @@
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
-    NSLog(@"Application Did Finish Launching");     // Logs this if the application successfully launches.
+    NSLog(@"Application Did Finish Launching");             // Logs this if the application successfully launches.
+    CGRect viewRect = [[UIScreen mainScreen] bounds];       // Main screen rectangle used in application
+    self.window = [[UIWindow alloc] initWithFrame:viewRect];// Refers to UIWindow *window
+                   
+    UIViewController *colorTouchVC = [[UIViewController alloc] init]; // root view controller
+    UIView *colorView = [[UIView alloc] initWithFrame:viewRect];      // Create a view the size of the screen
+    colorView.backgroundColor = [UIColor colorWithRed:0.462 green:0.749 blue:0.937 alpha:1.0]; // Set the background, can use yellowColor
+    colorTouchVC.view = colorView;
+    
+    self.window.rootViewController = colorTouchVC;
+    [self.window makeKeyAndVisible]; // Should receive all keyboard & non/touch events
+                   
+    NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
     return YES;
 }
 
