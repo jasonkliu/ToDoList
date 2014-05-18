@@ -16,6 +16,7 @@
     // Override point for customization after application launch.
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
+    NSLog(@"Application Did Finish Launching");     // Logs this if the application successfully launches.
     return YES;
 }
 
