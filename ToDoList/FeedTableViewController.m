@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableViewController.h"
+#import "PhotoViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -20,6 +21,10 @@
     if (self) {
         // Custom initialization
         //self.imageTitleArray = @[@"Image 1",@"Image 2",@"Image 3",@"Image 4", @"Image 5"];
+        self.title = @"Feed";
+        self.tabBarItem.image = [UIImage imageNamed:@"tab_icon_feed.png"];
+        self.imageTitleArray = @[@"Image 1", @"Image 2", @"Image 3", @"Image 4", @"Image 5"];
+        self.imageFileNameArray = @[@"image1.png", @"image2.png", @"image3.png", @"image4.png", @"image5.png"];
     }
     return self;
 }
@@ -73,6 +78,14 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Set up the image filename, using the array imageFilenames
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init];
+    photoVC.imageFileName = imageFilenames[indexPath.row];
+    
+    [self.navigationController pushViewController:photoVC animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

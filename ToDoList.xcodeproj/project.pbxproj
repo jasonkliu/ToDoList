@@ -28,6 +28,7 @@
 		96E6798A192A6F8F00655959 /* icon_dryer.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E67989192A6F8F00655959 /* icon_dryer.png */; };
 		96E6798D192A6FF500655959 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E6798C192A6FF500655959 /* ProfileViewController.m */; };
 		96E67993192A840600655959 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E67992192A840600655959 /* FeedTableViewController.m */; };
+		96E67996192A87EE00655959 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E67995192A87EE00655959 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		96E6798C192A6FF500655959 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		96E67991192A840600655959 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		96E67992192A840600655959 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		96E67994192A87EE00655959 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		96E67995192A87EE00655959 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				96D57CF3191A8F1F005AD3A3 /* AppDelegate.m */,
 				96E67991192A840600655959 /* FeedTableViewController.h */,
 				96E67992192A840600655959 /* FeedTableViewController.m */,
+				96E67994192A87EE00655959 /* PhotoViewController.h */,
+				96E67995192A87EE00655959 /* PhotoViewController.m */,
 				96E67986192A6AE600655959 /* FeedViewController.h */,
 				96E67987192A6AE600655959 /* FeedViewController.m */,
 				96E6798B192A6FF500655959 /* ProfileViewController.h */,
@@ -290,6 +295,7 @@
 				96D57CF0191A8F1F005AD3A3 /* main.m in Sources */,
 				96B5784D191AA07A00386320 /* AddToDoItemViewController.m in Sources */,
 				96E67993192A840600655959 /* FeedTableViewController.m in Sources */,
+				96E67996192A87EE00655959 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
