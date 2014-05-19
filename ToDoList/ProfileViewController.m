@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "AFNetworking/AFNetworking.h"
 
 @interface ProfileViewController ()
 
@@ -35,6 +36,10 @@
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.scrollView.contentSize = CGSizeMake(320, 600);
+    
+    UIImageView *profileImageView = [[UIImageView alloc] init];
+    profileImageView.frame = CGRectMake(20, 20, 100, 114);
+    //[profileImageView setImageWithURL]
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 140, 280, 40)];
     nameLabel.text = @"Name: Jason";
