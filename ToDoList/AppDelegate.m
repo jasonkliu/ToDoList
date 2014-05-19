@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "FeedViewController.h"
 #import "ProfileViewController.h"
+#import "FeedTableViewController.h"
 
 @implementation AppDelegate
 
@@ -27,15 +28,17 @@
     [self.window makeKeyAndVisible]; // Should receive all keyboard & non/touch events*/
     
     // Use a Tab controller to give tabs at the bottom of the screen.
-    FeedViewController *feedViewController = [[FeedViewController alloc] init]; // Title and image initialized in controller
+    //FeedViewController *feedViewController = [[FeedViewController alloc] init]; // Title and image initialized in controller
     //FeedViewController *favoritesViewController = [[FeedViewController alloc] init];
-    ProfileViewController *profileController = [[ProfileViewController alloc] init];
+    //ProfileViewController *profileController = [[ProfileViewController alloc] init];
     //favoritesViewController.title = @"Favorites";
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
-    // Use a Navigation Controller and push like a stack
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:profileController];
+    // Use a TableViewController
+    FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
+    // Use a Navigation Controller and push like a stack
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
     
     [tabBarController setViewControllers:@[navController]];
     
