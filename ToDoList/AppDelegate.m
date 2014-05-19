@@ -26,10 +26,8 @@
     [self.window makeKeyAndVisible]; // Should receive all keyboard & non/touch events*/
     
     // Use a Tab controller to give tabs at the bottom of the screen.
-    UIViewController *feedViewController = [[UIViewController alloc] init];
-    feedViewController.title = @"Feed";
-    // feedViewController.tabBarItem.image = [UIImage imageNamed:@"imagename"] // Add a png image to the tab
-    UIViewController *favoritesViewController = [[UIViewController alloc] init];
+    FeedViewController *feedViewController = [[FeedViewController alloc] init]; // Title and image initialized in controller
+    FeedViewController *favoritesViewController = [[FeedViewController alloc] init];
     favoritesViewController.title = @"Favorites";
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];

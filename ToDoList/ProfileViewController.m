@@ -1,30 +1,24 @@
 //
-//  FeedViewController.m
+//  ProfileViewController.m
 //  ToDoList
 //
 //  Created by Jason Liu on 5/19/14.
 //
 //
 
-#import "FeedViewController.h"
+#import "ProfileViewController.h"
 
-@interface FeedViewController ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation FeedViewController
+@implementation ProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"Feed";
-        self.tabBarItem.image = [UIImage imageNamed:@"icon_dryer"]; // Add an image
-        UIImageView *greggView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_dryer"]]; // Big image
-        [greggView setContentMode:UIViewContentModeScaleAspectFit];   // How view lays out content
-        greggView.frame = self.view.frame;
-        [self.view addSubview:greggView];
     }
     return self;
 }
@@ -33,7 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning

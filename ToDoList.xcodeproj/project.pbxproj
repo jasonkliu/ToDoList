@@ -25,6 +25,8 @@
 		96D57D07191A8F20005AD3A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96D57D05191A8F20005AD3A3 /* InfoPlist.strings */; };
 		96D57D09191A8F20005AD3A3 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D57D08191A8F20005AD3A3 /* ToDoListTests.m */; };
 		96E67988192A6AE600655959 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E67987192A6AE600655959 /* FeedViewController.m */; };
+		96E6798A192A6F8F00655959 /* icon_dryer.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E67989192A6F8F00655959 /* icon_dryer.png */; };
+		96E6798D192A6FF500655959 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E6798C192A6FF500655959 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		96D57D08191A8F20005AD3A3 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
 		96E67986192A6AE600655959 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		96E67987192A6AE600655959 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		96E67989192A6F8F00655959 /* icon_dryer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_dryer.png; sourceTree = "<group>"; };
+		96E6798B192A6FF500655959 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		96E6798C192A6FF500655959 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +129,13 @@
 		96D57CE9191A8F1F005AD3A3 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				96E67989192A6F8F00655959 /* icon_dryer.png */,
 				96D57CF2191A8F1F005AD3A3 /* AppDelegate.h */,
 				96D57CF3191A8F1F005AD3A3 /* AppDelegate.m */,
 				96E67986192A6AE600655959 /* FeedViewController.h */,
 				96E67987192A6AE600655959 /* FeedViewController.m */,
+				96E6798B192A6FF500655959 /* ProfileViewController.h */,
+				96E6798C192A6FF500655959 /* ProfileViewController.m */,
 				96B57849191A928C00386320 /* Main.storyboard */,
 				96B5784E191AA26E00386320 /* ToDoListTableViewController.h */,
 				96B5784F191AA26E00386320 /* ToDoListTableViewController.m */,
@@ -249,6 +257,7 @@
 				96B5784A191A928C00386320 /* Main.storyboard in Resources */,
 				96D57CEE191A8F1F005AD3A3 /* InfoPlist.strings in Resources */,
 				96D57CF6191A8F1F005AD3A3 /* Images.xcassets in Resources */,
+				96E6798A192A6F8F00655959 /* icon_dryer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +278,7 @@
 			files = (
 				96157FA519297DFB001FA25D /* ViewController.m in Sources */,
 				96D57CF4191A8F1F005AD3A3 /* AppDelegate.m in Sources */,
+				96E6798D192A6FF500655959 /* ProfileViewController.m in Sources */,
 				96E67988192A6AE600655959 /* FeedViewController.m in Sources */,
 				96B57853191AB8A500386320 /* ToDoItem.m in Sources */,
 				96B57850191AA26E00386320 /* ToDoListTableViewController.m in Sources */,
