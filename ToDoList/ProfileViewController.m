@@ -19,6 +19,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Profile";
+        self.tabBarItem.image = [UIImage imageNamed:@"icon_dryer"];
     }
     return self;
 }
@@ -27,6 +29,32 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Set up scrollview with the length of the screen
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.scrollView.contentSize = CGSizeMake(320, 600);
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 140, 280, 40)];
+    nameLabel.text = @"Name: Jason";
+    [self.scrollView addSubview:nameLabel];
+    
+    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 200, 280, 40)];
+    cityLabel.text = @"From: Here";
+    [self.scrollView addSubview:cityLabel];
+    
+    UITextView *biography = [[UITextView alloc] initWithFrame:CGRectMake(25, 260, 280, 180)];
+    biography.font = [UIFont fontWithName:@"Helvetica" size:15];
+    biography.editable = NO;
+    biography.text = @"Hi, my name is Jason...";
+    [self.scrollView addSubview:biography];
+    
+    UILabel *memberSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 300, 280, 40)];
+    memberSinceLabel.text = @"From: 2014";
+    [self.scrollView addSubview:memberSinceLabel];
+    
+    [self.view addSubview:self.scrollView];
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "FeedViewController.h"
+#import "ProfileViewController.h"
 
 @implementation AppDelegate
 
@@ -17,9 +18,9 @@
     NSLog(@"Application Did Finish Launching");             // Logs this if the application successfully launches.
     
     // Make the window yellow with buttons and respond to events.
-    /*CGRect viewRect = [[UIScreen mainScreen] bounds];       // Main screen rectangle used in application
+    CGRect viewRect = [[UIScreen mainScreen] bounds];       // Main screen rectangle used in application
     NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
-    self.window = [[UIWindow alloc] initWithFrame:viewRect];// Refers to UIWindow *window
+    /*self.window = [[UIWindow alloc] initWithFrame:viewRect];// Refers to UIWindow *window
                    
     UIViewController *colorTouchVC = [[ViewController alloc] init]; // root view controller
     self.window.rootViewController = colorTouchVC;
@@ -28,10 +29,11 @@
     // Use a Tab controller to give tabs at the bottom of the screen.
     FeedViewController *feedViewController = [[FeedViewController alloc] init]; // Title and image initialized in controller
     FeedViewController *favoritesViewController = [[FeedViewController alloc] init];
+    ProfileViewController *profileController = [[ProfileViewController alloc] init];
     favoritesViewController.title = @"Favorites";
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBarController;
