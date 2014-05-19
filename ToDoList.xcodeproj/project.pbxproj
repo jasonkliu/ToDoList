@@ -24,6 +24,7 @@
 		96D57CFF191A8F1F005AD3A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D57CE7191A8F1F005AD3A3 /* UIKit.framework */; };
 		96D57D07191A8F20005AD3A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96D57D05191A8F20005AD3A3 /* InfoPlist.strings */; };
 		96D57D09191A8F20005AD3A3 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D57D08191A8F20005AD3A3 /* ToDoListTests.m */; };
+		96E67988192A6AE600655959 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E67987192A6AE600655959 /* FeedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		96D57D04191A8F20005AD3A3 /* ToDoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToDoListTests-Info.plist"; sourceTree = "<group>"; };
 		96D57D06191A8F20005AD3A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96D57D08191A8F20005AD3A3 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
+		96E67986192A6AE600655959 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		96E67987192A6AE600655959 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 			children = (
 				96D57CF2191A8F1F005AD3A3 /* AppDelegate.h */,
 				96D57CF3191A8F1F005AD3A3 /* AppDelegate.m */,
+				96E67986192A6AE600655959 /* FeedViewController.h */,
+				96E67987192A6AE600655959 /* FeedViewController.m */,
 				96B57849191A928C00386320 /* Main.storyboard */,
 				96B5784E191AA26E00386320 /* ToDoListTableViewController.h */,
 				96B5784F191AA26E00386320 /* ToDoListTableViewController.m */,
@@ -264,6 +269,7 @@
 			files = (
 				96157FA519297DFB001FA25D /* ViewController.m in Sources */,
 				96D57CF4191A8F1F005AD3A3 /* AppDelegate.m in Sources */,
+				96E67988192A6AE600655959 /* FeedViewController.m in Sources */,
 				96B57853191AB8A500386320 /* ToDoItem.m in Sources */,
 				96B57850191AA26E00386320 /* ToDoListTableViewController.m in Sources */,
 				96D57CF0191A8F1F005AD3A3 /* main.m in Sources */,

@@ -8,24 +8,37 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FeedViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    //self.window.backgroundColor = [UIColor whiteColor];
-    //[self.window makeKeyAndVisible];
     NSLog(@"Application Did Finish Launching");             // Logs this if the application successfully launches.
-    CGRect viewRect = [[UIScreen mainScreen] bounds];       // Main screen rectangle used in application
+    
+    // Make the window yellow with buttons and respond to events.
+    /*CGRect viewRect = [[UIScreen mainScreen] bounds];       // Main screen rectangle used in application
+    NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
     self.window = [[UIWindow alloc] initWithFrame:viewRect];// Refers to UIWindow *window
                    
     UIViewController *colorTouchVC = [[ViewController alloc] init]; // root view controller
     self.window.rootViewController = colorTouchVC;
-    [self.window makeKeyAndVisible]; // Should receive all keyboard & non/touch events
-                   
-    NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
+    [self.window makeKeyAndVisible]; // Should receive all keyboard & non/touch events*/
+    
+    // Use a Tab controller to give tabs at the bottom of the screen.
+    UIViewController *feedViewController = [[UIViewController alloc] init];
+    feedViewController.title = @"Feed";
+    // feedViewController.tabBarItem.image = [UIImage imageNamed:@"imagename"] // Add a png image to the tab
+    UIViewController *favoritesViewController = [[UIViewController alloc] init];
+    favoritesViewController.title = @"Favorites";
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
