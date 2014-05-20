@@ -50,14 +50,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 5;
 }
@@ -82,7 +80,7 @@
 {
     // Set up the image filename, using the array imageFilenames
     PhotoViewController *photoVC = [[PhotoViewController alloc] init];
-    photoVC.imageFileName = imageFilenames[indexPath.row];
+    //photoVC.imageFileName = imageFilenames[indexPath.row];
     
     [self.navigationController pushViewController:photoVC animated:YES];
 }

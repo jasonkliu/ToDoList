@@ -7,7 +7,8 @@
 //
 
 #import "ProfileViewController.h"
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking/UIImageView+AFNetworking.h"
+//#import "AFNetworking/AFJSONRequestOperation.h"
 
 @interface ProfileViewController ()
 
@@ -37,9 +38,22 @@
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.scrollView.contentSize = CGSizeMake(320, 600);
     
+    // Grab a picture of a dog using AFNetworking. Use the placeholder image until it comes.
     UIImageView *profileImageView = [[UIImageView alloc] init];
     profileImageView.frame = CGRectMake(20, 20, 100, 114);
-    //[profileImageView setImageWithURL]
+    [profileImageView setImageWithURL:[NSURL URLWithString:@"https://i.imgur.com/KZugPhS.jpg"]
+                     placeholderImage:[UIImage imageNamed:@"icon_dryer.png"]];
+    [self.scrollView addSubview:profileImageView];
+    
+    // JSON Request
+    /*AFJSONRequestOperation *operation = [AFJSONRequestOperation
+        JSONRequestOperationWithRequest:request
+        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+            NSLog(@"JSON is %@", JSON);
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *error, NSError *error, id JSON) {
+            NSLog(@"NSError: %@", error.localizedDescription);
+        }];
+    [operation start];*/
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 140, 280, 40)];
     nameLabel.text = @"Name: Jason";

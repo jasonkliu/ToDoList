@@ -30,20 +30,20 @@
     // Use a Tab controller to give tabs at the bottom of the screen.
     //FeedViewController *feedViewController = [[FeedViewController alloc] init]; // Title and image initialized in controller
     //FeedViewController *favoritesViewController = [[FeedViewController alloc] init];
-    //ProfileViewController *profileController = [[ProfileViewController alloc] init];
+    ProfileViewController *profileController = [[ProfileViewController alloc] init];
     //favoritesViewController.title = @"Favorites";
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    //UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     // Use a TableViewController
-    FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    //FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     // Use a Navigation Controller and push like a stack
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:feedTableViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:profileController];
     
-    [tabBarController setViewControllers:@[navController]];
+    //[tabBarController setViewControllers:@[navController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
     return YES;
